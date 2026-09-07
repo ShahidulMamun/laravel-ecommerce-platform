@@ -60,7 +60,7 @@
   <div class="container">
     <div class="row align-items-center gy-5">
       <div class="col-lg-6" data-reveal>
-        <span class="sk-eyebrow">🔥 ঈদ কালেকশন লাইভ</span>
+        <span class="sk-eyebrow">🔥 উইন্টার কালেকশন</span>
         <h1 class="sk-hero-title">
           কেনাকাটা হোক<br>
           <span class="sk-italic">ঝামেলাহীন</span> ও আনন্দের
