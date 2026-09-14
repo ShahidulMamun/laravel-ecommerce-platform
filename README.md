@@ -6,6 +6,7 @@ A complete Laravel-based e-commerce landing page and admin panel system, special
 
 ### Public / Customer-Facing
 
+<<<<<<< HEAD
 - 🛍️ Modern, mobile-responsive landing page built with Bootstrap 5 and a custom design system
 - 🛒 Session-based shopping cart with Add to Cart, quantity update, and multi-item checkout support
 - ⚡ Quick Order flow for placing a single-product order directly without using the cart
@@ -28,6 +29,30 @@ A complete Laravel-based e-commerce landing page and admin panel system, special
 - ⭐ Customer review moderation with approve/reject functionality
 - ⚙️ Website settings management including logo, address, phone, email, and social media links
 - 💳 Payment method management including mobile banking account information and payment instructions
+=======
+* 🛍️ Modern, mobile-responsive landing page built with Bootstrap 5 and a custom design system
+* 🛒 Session-based shopping cart with Add to Cart, quantity update, and multi-item checkout support
+* ⚡ Quick Order flow for placing a single-product order directly without using the cart
+* 📦 Delivery area selection with separate charges for Dhaka and outside Dhaka
+* 💳 Multiple payment methods including Cash on Delivery, bKash, Nagad, Rocket, etc., configurable from the admin panel
+* ❓ Searchable FAQ page with accordion-based UI
+* 📧 Newsletter subscription with secure unsubscribe tokens
+* ⭐ Customer review submission with moderation queue
+* 🎯 Support for temporary promotional and campaign landing pages
+
+### Admin Panel
+
+* 🔐 Custom and secure admin authentication with a separate guard, brute-force protection, and session fixation prevention
+* 📊 Dashboard with revenue, order, and payment status overview
+* 🗂️ Category and product management with image upload support
+* 📋 Order management with order status, payment status tracking, and multi-product checkout grouping
+* ❓ FAQ management
+* 📬 Subscriber management with CSV export
+* 📨 Newsletter campaign composer with queued email delivery
+* ⭐ Customer review moderation with approve/reject functionality
+* ⚙️ Website settings management including logo, address, phone, email, and social media links
+* 💳 Payment method management including mobile banking account information and payment instructions
+>>>>>>> 3e5061eccfe1d56f1be30b8cb003abca67309be6
 
 ## 🛠️ Tech Stack
 
@@ -42,10 +67,17 @@ A complete Laravel-based e-commerce landing page and admin panel system, special
 
 ## 📋 Requirements
 
+<<<<<<< HEAD
 - PHP >= 8.2
 - Composer
 - MySQL >= 5.7
 - cPanel or any standard shared/VPS hosting environment
+=======
+* PHP >= 8.2
+* Composer
+* MySQL >= 5.7
+* cPanel or any standard shared/VPS hosting environment
+>>>>>>> 3e5061eccfe1d56f1be30b8cb003abca67309be6
 
 ## 🚀 Installation
 
@@ -107,10 +139,17 @@ The migrations should follow this order according to their foreign-key dependenc
 
 ## 🔐 Admin Panel Access
 
+<<<<<<< HEAD
 - **Login URL:** `/admin/login`
 - **Admin account creation:** Only through `php artisan admin:create`
 - **Public admin registration:** Disabled intentionally for security
 - **Brute-force protection:** After 5 failed password attempts, the account is locked for 60 seconds using rate limiting
+=======
+* **Login URL:** `/admin/login`
+* **Admin account creation:** Only through `php artisan admin:create`
+* **Public admin registration:** Disabled intentionally for security
+* **Brute-force protection:** After 5 failed password attempts, the account is locked for 60 seconds using rate limiting
+>>>>>>> 3e5061eccfe1d56f1be30b8cb003abca67309be6
 
 ## 📁 Important Folder Structure
 
@@ -201,6 +240,7 @@ CPANEL-NEWSLETTER-SETUP.txt
 
 The application includes several security measures:
 
+<<<<<<< HEAD
 - Separate authentication guard for admin and customer sides
 - CSRF protection enabled for all forms
 - Server-side price and delivery charge calculation
@@ -210,6 +250,17 @@ The application includes several security measures:
 - Rate limiting and brute-force protection for admin login
 - Session fixation protection
 - Separate admin authentication and guest middleware
+=======
+* Separate authentication guard for admin and customer sides
+* CSRF protection enabled for all forms
+* Server-side price and delivery charge calculation
+* Client-side values are never trusted for critical calculations
+* Admin registration is disabled
+* CLI-only admin account creation
+* Rate limiting and brute-force protection for admin login
+* Session fixation protection
+* Separate admin authentication and guest middleware
+>>>>>>> 3e5061eccfe1d56f1be30b8cb003abca67309be6
 
 ### Production Checklist
 

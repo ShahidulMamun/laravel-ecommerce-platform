@@ -180,7 +180,6 @@ a {
     color: var(--sk-charcoal);
 }
 .sk-italic {
-    font-style: italic;
     color: var(--sk-teal);
 }
 .sk-hero-sub {
