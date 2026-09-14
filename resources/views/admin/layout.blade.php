@@ -72,6 +72,12 @@
     <a href="{{ route('admin.reviews.index') }}" class="{{ request()->routeIs('admin.reviews.*') ? 'active' : '' }}">
     <i class="bi bi-star"></i> রিভিউ
   </a>
+
+  <a href="{{ route('admin.couriers.index') }}" class="{{ request()->routeIs('admin.reviews.*') ? 'active' : '' }}">
+    <i class="bi bi-truck"></i> কুরিয়ার 
+  </a>
+
+  
   
    <a href="{{ route('admin.settings.edit') }}" class="{{ request()->routeIs('admin.settings.*') ? 'active' : '' }}">
     <i class="bi bi-gear"></i> সেটিংস
