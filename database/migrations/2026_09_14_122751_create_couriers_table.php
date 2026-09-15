@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('couriers', function (Blueprint $table) {
             $table->id();
-             $table->id();
             $table->string('name');
             $table->enum('provider', ['steadfast', 'pathao', 'redx', 'ecourier'])->index();
             $table->string('api_url')->nullable();
