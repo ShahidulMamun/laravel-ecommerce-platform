@@ -13,13 +13,19 @@ return new class extends Migration
     {
         Schema::create('couriers', function (Blueprint $table) {
             $table->id();
+             $table->id();
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->enum('provider', ['steadfast', 'pathao', 'redx', 'ecourier'])->index();
             $table->string('api_url')->nullable();
             $table->text('api_key')->nullable();
             $table->text('secret_key')->nullable();
-            $table->json('settings')->nullable();
+            $table->text('client_id')->nullable();
+            $table->text('client_secret')->nullable();
+            $table->text('username')->nullable();
+            $table->text('password')->nullable();
             $table->boolean('is_active')->default(false);
+            $table->boolean('is_default')->default(false);
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }
