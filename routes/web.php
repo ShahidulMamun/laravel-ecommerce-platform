@@ -58,7 +58,7 @@ Route::middleware('admin.auth')->prefix('admin')->name('admin.')->group(function
     Route::resource('reviews', ReviewManageController::class)->only(['index', 'update', 'destroy']);
     Route::get('settings', [SettingsController::class, 'edit'])->name('settings.edit');
     Route::put('settings', [SettingsController::class, 'update'])->name('settings.update');
-    Route::resource('couriers', CourierController::class);
+    Route::resource('couriers', CourierController::class)->except(['show']);
 });
 
 //== Logout Route == 
