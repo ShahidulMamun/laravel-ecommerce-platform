@@ -2,16 +2,22 @@
 @section('title', 'কুরিয়ার অ্যাকাউন্ট')
 
 @section('content')
-<div class="d-flex justify-content-between align-items-center mb-4">
+
+{{-- তথ্য নোটিশ: একদম উপরে --}}
+<div class="alert alert-light border small mb-3">
+  <i class="bi bi-info-circle"></i>
+  বর্তমানে শুধু <strong>Steadfast</strong> এর বুকিং API সম্পূর্ণভাবে কানেক্টেড। Pathao/RedX/eCourier
+  এর ক্রেডেনশিয়াল এখানে সেভ রাখা যাবে, কিন্তু অর্ডার পেজ থেকে সরাসরি বুক করার ফিচারটা
+  ডেভেলপার তাদের merchant API ডকুমেন্টেশন কনফার্ম করার পর চালু হবে।
+</div>
+
+{{-- হেডার: টাইটেল বামে, বাটন ডান কোণে --}}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
   <h4 class="m-0">কুরিয়ার অ্যাকাউন্ট</h4>
-  <a href="{{ route('admin.couriers.create') }}" class="btn btn-admin-primary">
+  <a href="{{ route('admin.couriers.create') }}" class="btn btn-admin-primary ms-auto">
     <i class="bi bi-plus-lg"></i> নতুন কুরিয়ার অ্যাকাউন্ট
   </a>
-  
-  @if(session('status'))
-  <div class="alert alert-success">{{ session('status') }}</div>
-  @endif
-
+</div>
 
 @php
   $providerLabels = ['steadfast' => 'Steadfast', 'pathao' => 'Pathao', 'redx' => 'RedX', 'ecourier' => 'eCourier'];
@@ -70,12 +76,5 @@
       </tbody>
     </table>
   </div>
-</div>
-
-<div class="alert alert-light border mt-3 small">
-  <i class="bi bi-info-circle"></i>
-  বর্তমানে শুধু <strong>Steadfast</strong> এর বুকিং API সম্পূর্ণভাবে কানেক্টেড। Pathao/RedX/eCourier
-  এর ক্রেডেনশিয়াল এখানে সেভ রাখা যাবে, কিন্তু অর্ডার পেজ থেকে সরাসরি বুক করার ফিচারটা
-  ডেভেলপার তাদের merchant API ডকুমেন্টেশন কনফার্ম করার পর চালু হবে।
 </div>
 @endsection
