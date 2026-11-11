@@ -7,11 +7,11 @@
   <a href="{{ route('admin.couriers.create') }}" class="btn btn-admin-primary">
     <i class="bi bi-plus-lg"></i> নতুন কুরিয়ার অ্যাকাউন্ট
   </a>
-</div>
-
-@if(session('status'))
+  
+  @if(session('status'))
   <div class="alert alert-success">{{ session('status') }}</div>
-@endif
+  @endif
+
 
 @php
   $providerLabels = ['steadfast' => 'Steadfast', 'pathao' => 'Pathao', 'redx' => 'RedX', 'ecourier' => 'eCourier'];
