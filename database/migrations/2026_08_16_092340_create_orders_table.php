@@ -22,11 +22,11 @@ return new class extends Migration
             $table->string('customer_name');
             $table->string('phone', 20);
             $table->text('address');
+            $table->enum('delivery_area', ['dhaka', 'outside_dhaka'])->nullable();
+            $table->unsignedInteger('delivery_charge')->default(0);
             $table->enum('payment_method', ['cod', 'bkash'])->default('cod');
             $table->enum('payment_status', ['unpaid', 'paid', 'refunded'])->default('unpaid');
             $table->enum('status', ['pending', 'confirmed', 'shipped', 'delivered', 'cancelled'])->default('pending');
-            $table->enum('delivery_area', ['dhaka', 'outside_dhaka'])->nullable()->after('address');
-            $table->unsignedInteger('delivery_charge')->default(0);
             $table->timestamps();
             $table->index('phone');
             $table->index('status');

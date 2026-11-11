@@ -9,15 +9,15 @@ use Illuminate\Support\Facades\Validator;
 
 class CreateAdminCommand extends Command
 {
-    protected $signature = 'create:admin';
+    protected $signature = 'make:admin';
     protected $description = 'একটা নতুন অ্যাডমিন অ্যাকাউন্ট তৈরি করে (সিকিউর CLI পদ্ধতি)';
 
     public function handle(): int
     {
-        $name = $this->ask('নাম');
-        $email = $this->ask('ইমেইল');
-        $password = $this->secret('পাসওয়ার্ড (কমপক্ষে ৮ ক্যারেক্টার)');
-        $confirm = $this->secret('পাসওয়ার্ড আবার লিখো');
+        $name = $this->ask('Name');
+        $email = $this->ask('Email');
+        $password = $this->secret('Password(min 8 character))');
+        $confirm = $this->secret('Confirm Password');
 
         $validator = Validator::make(
             compact('name', 'email', 'password'),
